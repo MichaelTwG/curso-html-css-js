@@ -1,0 +1,60 @@
+/* 
+Selectores Básicos
+
+El primer tipo de selector es el que se basa en el nombre de la etiqueta HTML. 
+Este selector afecta a todas las etiquetas con el mismo nombre dentro de un documento HTML.
+
+Por ejemplo, si queremos listar diferentes ingredientes de una receta, 
+podemos crear un <h3> con el texto "Ingredientes" y una lista <ul> con varios <li>:
+
+h3 {
+    color: crimson;
+}
+
+li {
+    color: darksalmon;
+}
+*/
+
+/*
+Anteriormente dimos un estilo a todos los elementos <li>. 
+Pero ¿qué sucedería si quisiéramos aplicar estilos solo a algunos de ellos?
+
+Para eso podemos usar un *selector por clase*. 
+Este tipo de selector se crea agregando un atributo especial llamado "class" 
+a los elementos que queremos modificar.
+
+En nuestro archivo CSS, el selector se escribe con un punto seguido del nombre de la clase:
+*/
+
+.resaltado {
+    color: crimson;
+}
+
+/*
+Las clases funcionan como grupos. 
+Podemos imaginarlas como si estuviéramos en una escuela con varias clases de alumnos:
+
+1A
+1B
+1C
+1D
+
+Cada clase tiene sus propias características: los de 1A son revoltosos, los de 1B calladitos, etc.
+En CSS pasa lo mismo: podemos agrupar elementos bajo una misma clase 
+y aplicarles estilos específicos.
+
+Por ejemplo, todos los elementos con la clase "resaltado" tendrán el texto en color carmesí.
+
+Lo mejor de las clases es que podemos aplicarlas a tantos elementos como necesitemos. Así reutilizamos estilos y mantenemos nuestro código más limpio, ordenado y fácil de mantener.
+*/
+
+/* Nota: Recordar hablar sobre cómo elegir buenos nombres de clase y por qué es importante *
+
+/*
+Seleccionar por Id, el funcionamiento es similar al anterior solamente que el id solamente se le puede dar a un elemento por pagina (o al menos eso es lo correcto semanticamente)
+*/
+
+#ingrediente-secreto {
+    color: blue;
+}

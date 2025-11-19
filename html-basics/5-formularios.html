@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+    <a href="../index.html">Volver al menú principal</a>
+    <h1>Formularios en HTML</h1>
+    <p>Los formularios son la principal manera de recibir datos del usuario. Esta página está estructurada en 3 partes: los tipos de campos, los atributos más importantes y un ejemplo completo.</p>
+    
+    <hr>
+
+    <h2 id="tipos">1. Tipos de Campos (Inputs y más)</h2>
+    <p>Estos son los bloques de construcción de cualquier formulario.</p>
+    <form>
+        <!-- No se usan labels ni otros atributos aquí para mantener el ejemplo simple y enfocado en el 'type' -->
+        <p><strong>Input de Texto (type="text"):</strong> Campo de texto de una línea.</p>
+        <input type="text">
+
+        <p><strong>Input de Contraseña (type="password"):</strong> Oculta los caracteres escritos.</p>
+        <input type="password">
+
+        <p><strong>Input de Email (type="email"):</strong> Valida que el texto tenga un formato de email.</p>
+        <input type="email">
+
+        <p><strong>Input de Número (type="number"):</strong> Campo para valores numéricos.</p>
+        <input type="number">
+
+        <p><strong>Input de Fecha (type="date"):</strong> Muestra un selector de fechas.</p>
+        <input type="date">
+
+        <p><strong>Checkbox (type="checkbox"):</strong> Para opciones de sí/no o selección múltiple.</p>
+        <input type="checkbox"> Opción 1 <br>
+        <input type="checkbox"> Opción 2
+
+        <p><strong>Radio Button (type="radio"):</strong> Permite seleccionar una única opción de un grupo. Deben compartir el mismo atributo 'name' para funcionar.</p>
+        <input type="radio" name="grupo-ejemplo"> Opción A <br>
+        <input type="radio" name="grupo-ejemplo"> Opción B
+
+        <p><strong>Selector de Archivos (type="file"):</strong> Permite al usuario subir uno o más archivos.</p>
+        <input type="file">
+
+        <p><strong>Botón de Envío (type="submit"):</strong> Envía los datos del formulario.</p>
+        <input type="submit">
+
+        <p><strong>Área de Texto (&lt;textarea&gt;):</strong> Para texto de múltiples líneas.</p>
+        <textarea rows="3"></textarea>
+
+        <p><strong>Lista Desplegable (&lt;select&gt;):</strong> Para seleccionar una opción de una lista.</p>
+        <select>
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <h2 id="atributos">2. Atributos y Etiquetas Esenciales</h2>
+    <p>Los atributos y etiquetas correctos hacen que un formulario sea funcional y accesible.</p>
+
+    <h3>La etiqueta <code>&lt;label&gt;</code></h3>
+    <p>Es la etiqueta de texto para un campo. Es <strong>crucial para la accesibilidad</strong>. Se vincula a un campo usando el atributo <code>for</code>, que debe coincidir con el <code>id</code> del campo.</p>
+    <label for="usuario_demo">Nombre de usuario:</label>
+    <input type="text" id="usuario_demo">
+
+    <h3>Atributo <code>name</code></h3>
+    <p>Identifica el dato cuando se envía al servidor. Es el "nombre de la variable". Sin este atributo, el dato del campo no se envía.</p>
+    <!-- El servidor recibirá algo como: nombre_usuario=valor_ingresado -->
+    <input type="text" name="nombre_usuario">
+
+    <h3>Atributo <code>value</code></h3>
+    <p>Define el valor por defecto de un campo o el valor que se enviará. En los radio buttons y checkboxes, es el valor que se envía si la opción está seleccionada.</p>
+    <input type="text" value="Valor por defecto">
+    <br>
+    <input type="radio" name="plan" value="premium"> Plan Premium <!-- Si se selecciona, se enviará: plan=premium -->
+    
+    <h3>Atributo <code>placeholder</code></h3>
+    <p>Muestra un texto de ayuda dentro del campo, que desaparece cuando el usuario empieza a escribir.</p>
+    <input type="email" placeholder="tu@email.com">
+
+    <h3>Atributo <code>required</code></h3>
+    <p>Hace que un campo sea obligatorio. El navegador no permitirá enviar el formulario si este campo está vacío.</p>
+    <input type="text" required>
+
+    <h3>Atributos del <code>&lt;form&gt;</code>: <code>action</code> y <code>method</code></h3>
+    <p><code>action</code>: La URL del servidor que recibirá y procesará los datos.</p>
+    <p><code>method</code>: El método HTTP para enviar los datos. Comúnmente <code>GET</code> (para datos no sensibles, visibles en la URL) o <code>POST</code> (para datos sensibles, enviados en el cuerpo de la petición).</p>
+    <code>&lt;form action="/registrar" method="POST"&gt;...&lt;/form&gt;</code>
+
+    <hr>
+
+    <h2 id="ejemplo">3. Ejemplo: Formulario de Registro Completo</h2>
+    <p>Aquí combinamos todo lo anterior para crear un formulario de registro funcional y bien estructurado.</p>
+    
+    <form action="/registro-ficticio" method="post">
+        <fieldset>
+            <legend>Información Personal</legend>
+            
+            <div>
+                <label for="nombre_completo">Nombre Completo:</label><br>
+                <input type="text" id="nombre_completo" name="nombre" required placeholder="Ej: Ana Pérez">
+            </div>
+            <br>
+            <div>
+                <label for="correo_electronico">Correo Electrónico:</label><br>
+                <input type="email" id="correo_electronico" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+            <br>
+            <div>
+                <label for="contrasena_reg">Crear Contraseña:</label><br>
+                <input type="password" id="contrasena_reg" name="password" required>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Información Adicional</legend>
+            
+            <div>
+                <label for="pais">País:</label><br>
+                <select id="pais" name="pais">
+                    <option value="">--ziona un país--</option>
+                    <option value="ar">Argentina</option>
+                    <option value="co">Colombia</option>
+                    <option value="es">España</option>
+                    <option value="mx">México</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <p>Género:</p>
+                <input type="radio" id="genero_m" name="genero" value="masculino">
+                <label for="genero_m">Masculino</label><br>
+                <input type="radio" id="genero_f" name="genero" value="femenino">
+                <label for="genero_f">Femenino</label><br>
+                <input type="radio" id="genero_o" name="genero" value="otro">
+                <label for="genero_o">Otro</label>
+            </div>
+            <br>
+            <div>
+                <label for="comentarios">Comentarios:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Algo que quieras añadir..."></textarea>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Finalizar</legend>
+            <div>
+                <input type="checkbox" id="terminos_cond" name="acepta_terminos" value="true" required>
+                <label for="terminos_cond">Acepto los términos y condiciones.</label>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Crear Cuenta</button>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Texto</title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+    <!-- TIPOGRAFIAS -->
+
+    <link rel="stylesheet" href="fonts.css">
+
+</head>
+<body>
+    <a href="../../index.html">Volver al menú principal</a>
+
+    <h1>Trabajando con texto en HTML/CSS</h1>
+
+    <h2>Propiedades de Texto Basicas</h2>
+
+    <h3>Color de letra (<code>color</code>)</h3>
+    <p id="color">Se cambia el color de letra con la propiedad llamada <code>color</code> y existen 3 formas de agregar color muy utilizadas. 1 Básica y 2 avanzadas</p>
+    <ul>
+        <li>
+            <strong>Básico:</strong>
+            <ul>
+                <li>Nombre de color</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Avanzado:</strong>
+            <ul>
+                <li>Código <code>hexadecimal</code></li>
+                <li>Código <code>RGB</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 
+Lista jerárquica: cada nivel principal (Básico, Avanzado)
+contiene su propia sublista de ejemplos.
+Uso de <strong> para destacar las categorías.
+-->
+    <h3>Tipo de Letra (<code>font-family</code>)</h3>
+    <p>La propiedad <code>font-family</code> permite cambiar el tipo de letra del texto. 
+        Cada fuente tiene un estilo distinto, por lo que elegir la adecuada ayuda a definir la apariencia general de la página.</p>
+    
+    <p>Podemos aplicar una fuente a un solo elemento, a un grupo de ellos o a toda la página. 
+    En este ejemplo se utilizó el selector universal <code>*</code> para asignar una misma fuente a todos los elementos del documento.</p>
+    
+    <p>También es una buena práctica agregar varias fuentes como respaldo. 
+    De esta forma, si una fuente no está disponible en el sistema, el navegador usa la siguiente de la lista.</p>
+    
+    <ul>
+        <li><strong>Ejemplo:</strong> <code>font-family: 'Segoe UI', Helvetica, Arial, sans-serif;</code></li>
+        <li>El navegador intentará usar <em>Segoe UI</em>. Si no la encuentra, probará con <em>Helvetica</em>, luego con <em>Arial</em> y finalmente con cualquier fuente sin serif.</li>
+    </ul>
+    
+    <h3>Tamaño de fuente (<code>font-size</code>)</h3>
+    <p><code>font-size</code> se utiliza para modificar el tamaño del texto, el valor es un numero seguido de una unidad de medida, el valor para el texto normal parrafos y demas etiquetas suele ser de: 16px</p>
+
+    <p><strong>Ejemplo:</strong> <code>font-size:24px;</code></p>
+    <p class="text-normal">Se va a hablar de unidades de medida en profundiad mas adelante. Es muy importante para que la web sea legible por todos los tipos de dispositivos (smartphone, tablets, pc, etc) ya que el tamaño de pantalla varia, tambien debe de variar el tamaño del texto en cada una.</p>
+
+    <ul>
+        <li class="text-large">Texto grande: <code>18px</code></li>
+        <li class="text-normal">Texto mediano: <code>14px</code></li>
+        <li class="text-small">Texto pequeño: <code>12px</code></li>
+    </ul>
+    
+    <!-- 
+    
+    Nota: los nombres de las clases se escriben en inglés porque es el idioma estándar en el desarrollo web.
+    Aunque parezca más difícil al principio, a mí se me resbala algún (espa-iglish) de vez en cuando.
+    Te ayudará a entender documentación y proyectos reales.
+    
+    -->
+
+
+    <h3>Grosor del texto (<code>font-weight</code>)</h3>
+    <p>La propiedad <code>font-weight</code> se utiliza para cambiar el grosor del texto. 
+    Los valores posibles dependen de la fuente que se esté utilizando, 
+    pero normalmente van desde <code>100</code> (muy fino) hasta <code>900</code> (muy grueso).</p>
+        
+    <p>También se pueden usar valores por nombre como <code>normal</code> (equivale a 400) y <code>bold</code> (equivale a 700).</p>
+
+    <ul>
+        <li class="weight-light">Grosor 100</li>
+        <li class="weight-normal">Grosor 400 (normal)</li>
+        <li class="weight-bold">Grosor 700 (bold)</li>
+        <li class="weight-extra-bold">Grosor 900</li>
+    </ul>
+
+    <h3>Cambiar el estilo de la letra (<code>font-style</code>)</h3>
+    <ul>
+        <li>Estilo: <span class="italic">Italic o Cursiva</span></li>
+        <li>Estilo: <span class="oblique">Oblique (un poco menos inclinado)</span></li>
+        <li>Estilo: <span class="text-normal">Normal o Valor estándar</span></li>
+    </ul>
+
+    <!-- 
+    Lo normal cuando utilizamos font-style es usar italic, 
+    porque oblique no funciona en todas las tipografías 
+    y   "normal" es el valor por defecto, así que no suele declararse (salvo en casos muy específicos). 
+    -->
+
+    <h3>Alinear el texto con (<code>text-align</code>)</h3>
+    <p>La propiedad <code>text-align</code> sirve para modificar la alineacion del texto dentro de su contenedor. Cuenta con los siguientes valores:</p>
+
+    <ul>
+        <li>
+            <strong><code>left</code></strong>
+            <p class="text-align-left">Alinea el texto a la izquierda (por defecto, ideal para lectura). Natural para usuarios LTR</p>
+        </li>
+        <li>
+            <strong><code>right</code></strong>
+            <p class="text-align-right">Alinea a la derecha util para destacar información secundaria (como precios, fechas o autorías). Sistema natural de escritura para usarios RTL</p>
+        </li>
+        <li>
+            <strong><code>center</code></strong>
+            <p class="text-align-center">Alinea al centro. Útil para títulos, citas, menús y mensajes cortos.</p>
+        </li>
+        <li>
+            <strong><code>justify</code></strong>
+            <p class="text-align-justify">Justifica el texto, similar a como lo hacen los párrafos en un editor de texto como Word.
+            Distribuye el contenido para que cada línea ocupe todo el ancho disponible del contenedor, ajustando los espacios entre palabras para alinear el texto tanto a la izquierda como a la derecha. Estético en contextos formales o de lectura prolongada como artículos, blogs, informes, libros digitales</p>
+        </li>  
+    </ul>
+
+    <!-- Recuerden investigar que es un usuario LTR y RTL-->
+
+    <p class="info">
+        La propiedad <code>text-align</code> solo tiene efecto cuando el texto está dentro de un contenedor con más espacioso que el propio texto. No saben cuantas veces intente aplicar esta propiedad a mis elementos y no me funcionaron por no fijarme en ese detalle. Al final la deje de usar, ahora que entendi esto la puedo usar otra vez.
+
+    <h3>Subrallar el texto con(<code>text-decoration)</code></h3>
+    <p>La propiedad <code>text-decoration</code> sirve para subrallar el texto con lineas tiene 3 valores</p>
+
+    <ul>
+        <li>
+            <strong><code>none</code></strong>
+            <p class="text-decoration-none">No subraya el texto</p>
+        </li>
+        <li>
+            <strong><code>underline</code></strong>
+            <p class="text-decoration-underline">Subraya el texto por debajo del texto</p>
+        </li>
+        <li>
+            <strong><code>overline</code></strong>
+            <p class="text-decoration-overline">Subraya el texto con una linea que pasas por encima el texto</p>
+        </li>
+        <li>
+            <strong><code>line-through</code></strong>
+            <p class="text-decoration-through">Subralla el texto con una linea que pasa por el centro</p>
+        </li>
+    </ul>
+
+    <h3>Espaciado entre lineas con <code>line-height</code> y espaciado entre palabras con <code>letter-spacing</code></h3>
+    <p >El valor por defecto es <code>none</code> luego se le da un valor numerico que repesenta la cantidad de espaciado que queremos tener entre lineas.</p>
+
+    <p class="line-height letter-spacing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repellendus praesentium reprehenderit similique quasi provident impedit eos eum, facere nisi. Sunt aperiam quisquam mollitia nisi? Ipsum ducimus magni repudiandae! A. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ab, ipsam ut earum eius suscipit sed quod eaque. Impedit, qui. Doloremque harum nostrum autem nulla nam deserunt aliquam eligendi incidunt!</p>
+
+    <Strong class="letter-spacing-6">Espaciado</Strong>
+
+    <h3>Controla la capitalizacion de las letras con <code>text-transform</code></h3>
+
+    <ul>
+        <li class="text-transform-lowercase">Lo TransForma A Minuscula: <code>text-transform: lowercase</code> </li>
+
+        <li class="text-transform-uppercase">Lo TransForma A Mayuscula: <code >text-transform: uppercase</code> </li>
+
+        <li class="text-transform-none">No Lo TransForma <code >text-transform: none</code></li>
+
+        <li class="text-transform-capitalize">todas las palabras empiezan con mayusculas: <code >text-transform: capitalize</code> </li>
+    </ul>
+
+    <h2>¿Como utilizar fuentes o tipografias externas en html/css?</h2>
+    <p>Dalto en su curso muestra 2 formas de colocar fuentes externas</p>
+
+    <h3>Usando google fonts</h3>
+    <p>Google fonts es un servicio de google de codigo abierto que proporciona fuentes para utilizar en webs, aplicaciones. Les dejo el link directo: <a target="_blank" href="https://fonts.google.com/">Google Fonts</a></p>
+
+    <p>Por cierto a Dalto le encanta la typografia <a target="_blank" href="https://fonts.google.com/specimen/Montserrat?query=montserrat"></a>Montserrat. A mi tambien me gusta mucho es moderna y facil de leer</p>
+
+    <div class="info">
+    <p><strong>💡 Tip:</strong></p>
+
+    <p>Una tipografía <strong>NO se elige porque “nos gusta”.</strong>  
+    Se elige porque:</p>
+
+    <ul>
+        <li>✔ Se lee bien</li>
+        <li>✔ Combina con la temática o marca</li>
+        <li>✔ No cansa la vista</li>
+        <li>✔ Transmite la personalidad correcta</li>
+    </ul>
+
+    <p>
+        Puede pasar que justo las fuentes correctas sean también las que te gustan,
+        pero recuerden que <strong>no todos tenemos los mismos gustos</strong>.
+        Muchas veces abandonamos una web en segundos porque la tipografía es difícil de leer,
+        o incluso puede llegar a causar dolor de cabeza.
+    </p>
+
+
+    <p class="text-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quasi necessitatibus quaerat praesentium iusto, eius quas deserunt natus fugiat est quis deleniti exercitationem reiciendis? Totam nesciunt architecto illum blanditiis amet.
+    Dicta perspiciatis blanditiis, mollitia perferendis tempore dolores incidunt ex doloremque aut cupiditate. Suscipit voluptatum dignissimos exercitationem est aut voluptatibus totam. Consequuntur architecto numquam id unde repudiandae corrupti enim. Nesciunt, aperiam?</p>
+    
+</div>
+
+
+
+      
+</body>
+</html>

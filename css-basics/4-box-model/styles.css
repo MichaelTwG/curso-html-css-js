@@ -1,0 +1,79 @@
+code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*
+    width y height
+
+    Define los tamaños de la caja
+    Son valores numericos que pueden tener diferentes unidades de medida
+*/
+
+/*
+
+Una caja sin contenido con width y height definidos con un fondo de color crimson
+
+*/
+.width-height {
+    background:azure;
+    width: 500px;
+    height: 90px;
+}
+
+/*
+
+El uso de % en width y height con los inputs en este caso es un 90% del tamaño del contenedor que es el form que a su vez ocupa todo el espacio en pantalla disponible
+
+*/
+ form input, form button {
+    width: 90%;
+    box-sizing: border-box; /* ignoremos esto por ahora*/
+}
+
+/*
+En este caso text-align se utiliza para centrar horizontalmente los inputs y el boton
+*/
+
+form {
+    text-align: center;
+    width: 300px;
+    background: blue;
+}
+
+.padding-10 {
+    background: orangered;
+    padding: 10px;
+}
+.padding-20 {
+    background: orangered;
+    padding: 20px;
+}
+.padding-30 {
+    background: orangered;
+    padding: 30px;
+}
+.padding-40 {
+    background: orangered;
+    padding: 40px;
+}
+.padding-50 {
+    background: orangered;
+    padding: 50px;
+}
+
+.padding-container {
+    background: blue;
+    text-align: center;
+
+}
+
+.padding-container div {
+    display: inline-block;
+}

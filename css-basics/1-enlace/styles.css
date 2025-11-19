@@ -1,0 +1,26 @@
+/*
+
+Una vez enlazado nuestro archivo css podemos empezar a dalre estilos, los archivos css siguen la siguiente estructura.
+Selector {
+    propiedad:valor;
+    propiedad2:valor;
+    ...
+}
+
+Un selector (se le llama selector porque es lo que selecciona el elemento html que queremos modificar) existen varias maneras de seleccionar elementos y es importante dominarlas a todas, y saber como interactuan entre ellas (concepto de jerarquias)
+
+Luego se abre un bloque con { y se cierra con }
+Dentro de esos bloques se escriben las propiedades que se quieren modificar y su valor. Cada propoiedad se separa de una de otra con ; 
+ej: 
+
+h1 {
+    color:red;
+}
+
+en el anterior ejemplo se seleccionan todas las etiquetas h1 (solo hay una por documento), si seleccionaramos por ejemplo una etiqueta <p> se le aplicaria a todas las <p>
+*/
+
+p {
+    color:red;
+}
+

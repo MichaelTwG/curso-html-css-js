@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio - Formulario de Pizzería</title>
+</head>
+<body>
+    <a href="../../index.html">Volver al menú principal</a>
+    
+    <h1>Formulario de Pedido - Instrucciones</h1>
+
+    <p><strong>TAREA 1:</strong> Crea la etiqueta <code>&lt;form&gt;</code>.<br>
+    - El formulario debe enviar los datos a una URL ficticia <code>"/procesar-pedido"</code>.<br>
+    - Debe usar el método <code>"POST"</code>.</p>
+
+
+    <p><strong>TAREA 2:</strong> Crea un <code>&lt;fieldset&gt;</code> para agrupar los datos de contacto.<br>
+    - Añade una leyenda (<code>&lt;legend&gt;</code>) que diga <strong>"Datos de Contacto"</strong>.</p>
+
+
+    <div>
+        <p><strong>TAREA 3:</strong> Campo para el Nombre y Apellido.<br>
+        - Usa una etiqueta <code>&lt;label&gt;</code> con el texto "Nombre y Apellido:".<br>
+        - Usa un <code>&lt;input&gt;</code> de tipo <code>"text"</code>.<br>
+        - Haz que sea un campo obligatorio (<code>required</code>).<br>
+        - Dale un <code>name</code> apropiado (ej: <code>"nombre_cliente"</code>).<br>
+        - Añade un <code>placeholder</code> con un ejemplo (ej: "Juan Pérez").<br>
+        - No olvides vincular el <code>&lt;label&gt;</code> con el <code>&lt;input&gt;</code> usando <code>for</code> y <code>id</code>.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <p><strong>TAREA 4:</strong> Campo para el Teléfono.<br>
+        - Usa una etiqueta <code>&lt;label&gt;</code> con el texto "Teléfono:".<br>
+        - Usa un <code>&lt;input&gt;</code> de tipo <code>"tel"</code>.<br>
+        - Haz que sea obligatorio.<br>
+        - Dale un <code>name</code> (ej: <code>"telefono"</code>).<br>
+        - Añade un <code>placeholder</code> (ej: "1122334455").<br>
+        - Vincula el <code>&lt;label&gt;</code> con el <code>&lt;input&gt;</code>.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <p><strong>TAREA 5:</strong> Campo para la Dirección de Entrega.<br>
+        - Usa una etiqueta <code>&lt;label&gt;</code> con el texto "Dirección de Entrega:".<br>
+        - Usa un <code>&lt;input&gt;</code> de tipo <code>"text"</code>.<br>
+        - Haz que sea obligatorio.<br>
+        - Dale un <code>name</code> (ej: <code>"direccion"</code>).<br>
+        - Vincula el <code>&lt;label&gt;</code> con el <code>&lt;input&gt;</code>.</p>
+    </div>
+
+    <p><em>(Cierra el primer fieldset)</em></p>
+
+    <br>
+
+    <p><strong>TAREA 6:</strong> Crea un segundo <code>&lt;fieldset&gt;</code> para los detalles del pedido.<br>
+    - Añade una leyenda (<code>&lt;legend&gt;</code>) que diga <strong>"Detalles del Pedido"</strong>.</p>
+
+    <div>
+        <p><strong>TAREA 7:</strong> Lista desplegable para el tamaño de la pizza.<br>
+        - Usa una etiqueta <code>&lt;label&gt;</code> con el texto "Tamaño de la Pizza:".<br>
+        - Usa una etiqueta <code>&lt;select&gt;</code> con un <code>name</code> apropiado (ej: <code>"tamano_pizza"</code>).<br>
+        - Dentro del select, añade tres <code>&lt;option&gt;</code>:<br>
+        &nbsp;&nbsp;1. Pequeña (<code>value="pequena"</code>)<br>
+        &nbsp;&nbsp;2. Mediana (<code>value="mediana"</code>)<br>
+        &nbsp;&nbsp;3. Grande (<code>value="grande"</code>)<br>
+        - Vincula el <code>&lt;label&gt;</code> con el <code>&lt;select&gt;</code>.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <p><strong>TAREA 8:</strong> Botones de radio para el tipo de masa.<br>
+        - Crea dos opciones con <code>&lt;input type="radio"&gt;</code>.<br>
+        - Ambas deben compartir el mismo <code>name</code> (ej: <code>"tipo_masa"</code>) para que solo se pueda elegir una.<br>
+        - Opción 1:<br>
+        &nbsp;&nbsp;• <code>value="fina"</code><br>
+        &nbsp;&nbsp;• <label> que diga "Masa Fina".<br>
+        - Opción 2:<br>
+        &nbsp;&nbsp;• <code>value="normal"</code><br>
+        &nbsp;&nbsp;• <label> que diga "Masa Normal".<br>
+        - Vincula los labels con sus respectivos inputs.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <p><strong>TAREA 9:</strong> Checkboxes para los ingredientes extra.<br>
+        - Crea tres opciones con <code>&lt;input type="checkbox"&gt;</code>.<br>
+        - Cada una debe tener un <code>name</code> y <code>value</code> únicos.<br>
+        - Opción 1: <code>name="extra_queso"</code>, <code>value="si"</code> — <label>Extra Queso</label><br>
+        - Opción 2: <code>name="extra_jamon"</code>, <code>value="si"</code> — <label>Jamón</label><br>
+        - Opción 3: <code>name="extra_champinones"</code>, <code>value="si"</code> — <label>Champiñones</label><br>
+        - Vincula cada label con su input.</p>
+    </div>
+
+    <br>
+
+    <div>
+        <p><strong>TAREA 10:</strong> Campo para instrucciones especiales.<br>
+        - Usa una etiqueta <code>&lt;label&gt;</code> que diga "Instrucciones Especiales:".<br>
+        - Usa una etiqueta <code>&lt;textarea&gt;</code>.<br>
+        - Dale un <code>name</code> (ej: <code>"instrucciones"</code>).<br>
+        - Añade un <code>placeholder</code> que diga "Ej: Sin cebolla, por favor.".<br>
+        - Vincula el label con el textarea.</p>
+    </div>
+
+    <p><em>(Cierra el segundo fieldset)</em></p>
+
+    <br>
+
+    <p><strong>TAREA 11:</strong> Botón de envío.<br>
+    - Crea un botón que envíe el formulario.<br>
+    - Puedes usar <code>&lt;button type="submit"&gt;</code> o <code>&lt;input type="submit"&gt;</code>.<br>
+    - El texto del botón debe ser <strong>"Realizar Pedido"</strong>.</p>
+
+    <p><em>(Cierra la etiqueta del formulario)</em></p>
+
+
+    <h2>Pedido de Pizza Online</h2>
+    <p>Completa el siguiente formulario para realizar tu pedido.</p>
+
+    <form action="/procesar-pedido" method="POST">
+        <fieldset>
+            <legend>Datos de Contacto</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ej: Juan">
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Ej: Pérez">
+
+
+            <label for="phone">Telefono:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Ej: 112233445" required>
+
+            <label for="address">Direccion de entrega:</label>
+            <input type="text" name="address" id="address"required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalles del Pedido</legend>
+            <label for="pizza_size">Tamaño de la pizza:</label>
+            <select id="pizza_size" name="pizza_size">
+                <option value="small">Pequeña</option>
+                <option value="medium">Mediana</option>
+                <option value="large">Grande</option>
+            </select>
+
+            <p>Tipo de masa:</p>
+            <label for="mass_small">Masa Fina</label>
+            <input type="radio" name="mass_type" id="mass_small" value="fina">
+            <label for="mass_normal">Masa Normal</label>
+            <input type="radio" name="mass_type" id="mass_normal" value="normal">
+
+            <p>Ingredientes Extra:</p>
+            <label for="extra_cheese">Extra Queso</label>
+            <input type="checkbox" value="Si" name="extra_cheese" id="extra_cheese">
+            <label for="extra_ham">Jamon</label>
+            <input type="checkbox" value="Si" name="extra_ham" id="extra_ham">
+            <label for="extra_mushrooms">Champiñones</label>
+            <input type="checkbox" value="Si" name="extra_mushrooms" id="extra_mushrooms">
+            <br>
+            <label for="instructions">Instrucciones especiales:</label>
+            <textarea rows="1" cols="100" name="instructions" id="instructions" placeholder="Sin cebolla, por favor..."></textarea>
+        </fieldset>
+
+        <button type="submit">Realizar Pedido</button>
+    </form>
+
+
+</body>
+</html>

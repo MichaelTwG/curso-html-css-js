@@ -1,0 +1,539 @@
+/*
+propiedad color para los elemento code
+*/
+
+code {
+    color:blue;
+}
+
+/*
+Propiedad para cambiar el tipo de texto
+
+en el ejemplo se utiliza el selector especial:
+* (el signo de multiplicacion o asterisco)
+
+ese selector se utiliza para aplicar estilos a todos los elementos de la pagina pero con la menor jerarquia. (se habla de jerarquias mas adelante)
+*/
+
+* {
+    font-family: 'Segoe UI';
+}
+
+/* Se pueden cargar muchas fuentes en caso de que una falle en cargarse (buena practica) */
+
+code {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+/* En el ejemplo anterior se intenta cargar monospace si no funciona se carga Consolas y asi sucesivamente */
+
+/*
+Cambiar el tamaño de letra con la propiedad font-size
+*/
+
+.text-large {
+    font-size: 18px;
+}
+
+.text-normal {
+    font-size: 14px;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+/*
+Clases reutilizables para cambiar el grosor del texto.
+Los valores van del 100 (muy fino) al 900 (muy grueso).
+Estas clases pueden aplicarse a cualquier elemento HTML.
+
+No se si lo mencione anteriormente pero un elemento puede tener varias clases separadas por espacios
+ej:
+
+class="texto-grande weight-bold"
+*/
+
+.weight-light{
+    font-weight: 100;
+}
+.weight-normal{
+    font-weight: 400;
+}
+.weight-bold{
+    font-weight: 700;
+}
+.weight-extra-bold {
+    font-weight: 900;
+}
+
+/*
+bold = 700
+bolder = siguente nivel del valor defecto
+*/
+
+/*
+Font-style
+
+3 valores posibles:
+normal
+italic
+oblique
+*/
+
+.italic{
+    font-style:italic; /* Italica o Cursiva la mas comun */
+}
+
+.oblique {
+    font-style: oblique; /* Menos inclinacion que Italica */
+}
+
+.text-style-normal {
+    font-style: normal; /* Valor defecto */
+}
+
+/*
+Alineacion del texto con text-align
+left
+right
+center
+justify
+*/
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-justify{
+    text-align: justify;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+code {
+    color:blue;
+}
+
+/*
+Propiedad para cambiar el tipo de texto
+
+en el ejemplo se utiliza el selector especial:
+* (el signo de multiplicacion o asterisco)
+
+ese selector se utiliza para aplicar estilos a todos los elementos de la pagina pero con la menor jerarquia. (se habla de jerarquias mas adelante)
+*/
+
+* {
+    font-family: 'Segoe UI';
+}
+
+/* Se pueden cargar muchas fuentes en caso de que una falle en cargarse (buena practica) */
+
+code {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+/* En el ejemplo anterior se intenta cargar monospace si no funciona se carga Consolas y asi sucesivamente */
+
+/*
+Cambiar el tamaño de letra con la propiedad font-size
+*/
+
+.text-large {
+    font-size: 18px;
+}
+
+.text-normal {
+    font-size: 14px;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+/*
+Clases reutilizables para cambiar el grosor del texto.
+Los valores van del 100 (muy fino) al 900 (muy grueso).
+Estas clases pueden aplicarse a cualquier elemento HTML.
+
+No se si lo mencione anteriormente pero un elemento puede tener varias clases separadas por espacios
+ej:
+
+class="texto-grande weight-bold"
+*/
+
+.weight-light{
+    font-weight: 100;
+}
+.weight-normal{
+    font-weight: 400;
+}
+.weight-bold{
+    font-weight: 700;
+}
+.weight-extra-bold {
+    font-weight: 900;
+}
+
+/*
+bold = 700
+bolder = siguente nivel del valor defecto
+*/
+
+/*
+Font-style
+
+3 valores posibles:
+normal
+italic
+oblique
+*/
+
+.italic{
+    font-style:italic; /* Italica o Cursiva la mas comun */
+}
+
+.oblique {
+    font-style: oblique; /* Menos inclinacion que Italica */
+}
+
+.text-style-normal {
+    font-style: normal; /* Valor defecto */
+}
+
+/*
+Alineacion del texto con text-align
+left
+right
+center
+justify
+*/
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-justify{
+    text-align: justify;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+code {
+    color:blue;
+}
+
+/*
+Propiedad para cambiar el tipo de texto
+
+en el ejemplo se utiliza el selector especial:
+* (el signo de multiplicacion o asterisco)
+
+ese selector se utiliza para aplicar estilos a todos los elementos de la pagina pero con la menor jerarquia. (se habla de jerarquias mas adelante)
+*/
+
+* {
+    font-family: 'Segoe UI';
+}
+
+/* Se pueden cargar muchas fuentes en caso de que una falle en cargarse (buena practica) */
+
+code {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+/* En el ejemplo anterior se intenta cargar monospace si no funciona se carga Consolas y asi sucesivamente */
+
+/*
+Cambiar el tamaño de letra con la propiedad font-size
+*/
+
+.text-large {
+    font-size: 18px;
+}
+
+.text-normal {
+    font-size: 14px;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+/*
+Clases reutilizables para cambiar el grosor del texto.
+Los valores van del 100 (muy fino) al 900 (muy grueso).
+Estas clases pueden aplicarse a cualquier elemento HTML.
+
+No se si lo mencione anteriormente pero un elemento puede tener varias clases separadas por espacios
+ej:
+
+class="texto-grande weight-bold"
+*/
+
+.weight-light{
+    font-weight: 100;
+}
+.weight-normal{
+    font-weight: 400;
+}
+.weight-bold{
+    font-weight: 700;
+}
+.weight-extra-bold {
+    font-weight: 900;
+}
+
+/*
+bold = 700
+bolder = siguente nivel del valor defecto
+*/
+
+/*
+Font-style
+
+3 valores posibles:
+normal
+italic
+oblique
+*/
+
+.italic{
+    font-style:italic; /* Italica o Cursiva la mas comun */
+}
+
+.oblique {
+    font-style: oblique; /* Menos inclinacion que Italica */
+}
+
+.text-style-normal {
+    font-style: normal; /* Valor defecto */
+}
+
+/*
+Alineacion del texto con text-align
+left
+right
+center
+justify
+*/
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-justify{
+    text-align: justify;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+code {
+    color:blue;
+}
+
+/*
+Propiedad para cambiar el tipo de texto
+
+en el ejemplo se utiliza el selector especial:
+* (el signo de multiplicacion o asterisco)
+
+ese selector se utiliza para aplicar estilos a todos los elementos de la pagina pero con la menor jerarquia. (se habla de jerarquias mas adelante)
+*/
+
+* {
+    font-family: 'Segoe UI';
+}
+
+/* Se pueden cargar muchas fuentes en caso de que una falle en cargarse (buena practica) */
+
+code {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+/* En el ejemplo anterior se intenta cargar monospace si no funciona se carga Consolas y asi sucesivamente */
+
+/*
+Cambiar el tamaño de letra con la propiedad font-size
+*/
+
+.text-large {
+    font-size: 18px;
+}
+
+.text-normal {
+    font-size: 14px;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+/*
+Clases reutilizables para cambiar el grosor del texto.
+Los valores van del 100 (muy fino) al 900 (muy grueso).
+Estas clases pueden aplicarse a cualquier elemento HTML.
+
+No se si lo mencione anteriormente pero un elemento puede tener varias clases separadas por espacios
+ej:
+
+class="texto-grande weight-bold"
+*/
+
+.weight-light{
+    font-weight: 100;
+}
+.weight-normal{
+    font-weight: 400;
+}
+.weight-bold{
+    font-weight: 700;
+}
+.weight-extra-bold {
+    font-weight: 900;
+}
+
+/*
+bold = 700
+bolder = siguente nivel del valor defecto
+*/
+
+/*
+Font-style
+
+3 valores posibles:
+normal
+italic
+oblique
+*/
+
+.italic{
+    font-style:italic; /* Italica o Cursiva la mas comun */
+}
+
+.oblique {
+    font-style: oblique; /* Menos inclinacion que Italica */
+}
+
+.text-style-normal {
+    font-style: normal; /* Valor defecto */
+}
+
+/*
+Alineacion del texto con text-align
+left
+right
+center
+justify
+*/
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-justify{
+    text-align: justify;
+}
+
+/*
+Subrallado del texto con text-decoration
+none
+underline
+overline
+line-through
+*/
+
+.text-decoration-none {
+    text-decoration: none;
+}
+.text-decoration-underline {
+    text-decoration: underline;
+}
+.text-decoration-overline {
+    text-decoration: overline;
+}
+.text-decoration-through {
+    text-decoration: line-through;
+}
+
+/*
+Espacio entre lineas con line-height
+none
+valor numerico (1, 1.5, 2, 3, etc)
+
+Esta propiedad es especialmente util para que la letra sea facilmente leida, sirve mucho en algunas tipografias
+
+letter-spacing para cambiar el epsacio de las letras (funciona de manera similar)
+*/
+
+.line-height{
+    line-height: 2;
+}
+
+.letter-spacing {
+    letter-spacing: 1.2px;
+}
+
+.letter-spacing-6 {
+    letter-spacing: 6px;
+}
+
+/*
+Transforma el texto a mayusculas o minusculas con text-transform
+none
+lowercase
+uppercase
+*/
+
+
+.text-transform-lowercase {
+    text-transform: lowercase;
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.text-transform-none {
+    text-transform: none;
+}
+
+.text-transform-capitalize {
+    text-transform: capitalize;
+}
+
+/*
+
+Utilizando una fuente externa. En este caso montserrat
+
+*/
+.text-montserrat {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-style: Stalic;
+    line-height: 2;
+}
