@@ -4,55 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model</title>
-
     <link rel="stylesheet" href="styles.css">
 
-
-    <!-- Fuentes -->
-
-    <!-- Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- Fira Code -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="../../index.html">Volver al menú principal</a>
     
-    <h1>Entendiendo el concepto de Box Model en html/css</h1>
-    <p>El box model o modelo de cajas es un conjunto de reglas y propiedades que controlan como se muestran y posicionan los elementos dentro de nuestra web. Existen 6 partes basicas a la hora de trabajar con el box model de un elemento. Estas son:</p>
+    <h1>Entendiendo el Box Model</h1>
+    <p>El box model controla cómo se muestran y posicionan los elementos. Cada elemento es una caja con 6 partes:</p>
 
     <ol>
-        <li><code>width</code> para definir el tamaño horizontal de la caja</li>
-        <li><code>height</code> para definir el tamaño vertical de la caja</li>
-        <li><code>content</code>es el contenido y la base de toda la caja puede ser, texto, imagen, video, audio, etc</li>
-        <li><code>padding</code> es el relleno que hay entre el contenido y el borde</li>
-        <li><code>border</code> es el borde de la caja</li>
-        <li><code>margin</code> es un espacio que separa la caja de otras cajas</li>
-
+        <li><code>content</code>: El contenido real (texto, imagen).</li>
+        <li><code>width/height</code>: El tamaño del contenido.</li>
+        <li><code>padding</code>: Relleno interno (protección).</li>
+        <li><code>border</code>: El borde visible.</li>
+        <li><code>margin</code>: Espacio externo (separación).</li>
     </ol>
-    <h2>Tamaño vertical y horizontal de la caja con (<code>width</code> y <code>height</code>)</h2>
-    <div class="width-height">Un div (divisor) es una etiqueta sin valor semantico utilizado para agrupar y separar elementos</div>
+
+    <h2>1. Tamaño (width y height)</h2>
+    <div class="width-height">
+        Caja con width: 500px y height: 90px
+    </div>
 
     <form action="">
-        <input type="email" placeholder="email" required>
-        <input type="password" placeholder="contraseña" required>
-        <button type="submit">Iniciar secion</button>
+        <input type="email" placeholder="email (90% ancho)" required>
+        <input type="password" placeholder="contraseña (90% ancho)" required>
+        <button type="submit">Iniciar sesión</button>
     </form>
-
-    <h2>Relleno del elemento con (<code>padding</code>)</h2>
+    
+    <h2>2. Relleno (padding)</h2>
+    <p>El <code>padding</code> es el espacio entre el contenido y el borde. Acepta 1, 2 o 4 valores (orden reloj: Arriba, Derecha, Abajo, Izquierda).</p>
 
     <div class="padding-container">
-        <div class="padding-10">Padding de 10</div>
-        <div class="padding-20">Padding de 20</div>
-        <div class="padding-30">Padding de 30</div>
-        <div class="padding-40">Padding de 40</div>
-        <div class="padding-50">Padding de 50</div>
+        <div class="padding-10">
+            1 valor:<br>10px lados
+        </div>
+        <div class="padding-20">
+            2 valores:<br>20px(V) 40px(H)
+        </div>
+        <div class="padding-30">
+            1 valor:<br>30px lados
+        </div>
+    </div>
+
+    <h2>3. Margen (margin)</h2>
+    <p>Espacio invisible fuera de la caja. Separa los elementos entre sí.</p>
+    
+    <div class="margin-container">
+        <div class="caja-margin">Soy una caja con margin</div>
+        <div class="caja-margin">Soy otra caja con margin</div>
+    </div>
+
+    <div class="info-box">
+        <h3>⚠️ Nota: Colapso de Márgenes Verticales</h3>
+        <p>Fíjate en las cajas de arriba. Ambas tienen <code>margin: 30px</code>.</p>
+        <p>La lógica diría: 30px de abajo de la primera + 30px de arriba de la segunda = 60px de separación.</p>
+        <p><strong>Realidad:</strong> Solo hay <strong>30px</strong>. En vertical, los márgenes no se suman, se combinan (gana el mayor).</p>
+        <hr>
+        <p><strong>Tip de Centrado:</strong> Para centrar una caja horizontalmente usa: <code>margin: 0 auto;</code></p>
+    </div>
+
+    <h2>4. Borde (border)</h2>
+    <p>El borde necesita 3 datos: grosor, estilo y color. Ej: <code>border: 3px solid black;</code></p>
+    
+    <div class="border-container">
+        <div class="border-solid">
+            Sólido<br>
+            <code>solid</code>
+        </div>
+        <div class="border-rounded">
+            Redondeado<br>
+            <code>radius: 10px</code>
+        </div>
+        <div class="border-circle">
+            Círculo<br>
+            <code>radius: 50%</code>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>5. Tipos de Caja (display)</h2>
+    <p>Para entender por qué el <code>padding</code> o <code>width</code> a veces no funcionan como esperamos, debemos aprender la propiedad <code>display</code>:</p>
+    <ul>
+        <li><strong>block:</strong> (Como los <code>div</code> de arriba). Ocupan todo el ancho.</li>
+        <li><strong>inline:</strong> (Como este <span>texto</span>). Solo ocupan lo que miden sus letras. Ignoran el ancho y alto.</li>
+        <li><strong>inline-block:</strong> Una mezcla de ambos.</li>
+    </ul>
+
+    <div class="link-box">
+        <h3>Links a diferentes ejercicios practicos</h3>
+        <ul>
+            <li><a href="./practicas/index.html">Practicas</a></li>
+        </ul>
     </div>
 
 </body>

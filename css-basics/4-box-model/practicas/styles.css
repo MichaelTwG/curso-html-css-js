@@ -1,0 +1,66 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    /* Padding general para que no quede pegado al borde del navegador */
+    padding-bottom: 100px; 
+}
+
+hr {
+    border: none;
+    height: 1px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: navy;
+    border-radius: 2px;
+    box-shadow: 0px 0px 200px 15px navy;
+}
+
+/* IMPORTANTE: box-sizing: border-box
+   
+   Esta propiedad es fundamental para el Box Model moderno.
+   Sin ella: si tienes 300px de ancho y agregas 20px de padding, la caja crece a 340px.
+   Con ella: el ancho final se mantiene en 300px y el padding se mete "hacia adentro".
+   
+   Facilita mucho los cálculos matemáticos en el diseño.
+*/
+
+.formulario {
+    display: inline-block;
+    background-color: lightskyblue;
+    padding: 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.formulario_input {
+    color: black;
+    background-color: lightskyblue;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 3px;
+
+}
+
+.formulario_submit {
+    letter-spacing: 2px;
+    background-color:  dodgerblue;
+    text-transform: uppercase;
+    width: 50%;
+
+    display: block;
+    margin: 0 auto;
+}

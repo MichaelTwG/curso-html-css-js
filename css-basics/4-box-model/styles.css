@@ -1,79 +1,258 @@
-code, pre {
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
     font-family: 'Fira Code', monospace;
-    color: blue;
-    font-weight: 400;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    /* Padding general para que no quede pegado al borde del navegador */
+    padding-bottom: 100px; 
 }
 
+/* IMPORTANTE: box-sizing: border-box
+   
+   Esta propiedad es fundamental para el Box Model moderno.
+   Sin ella: si tienes 300px de ancho y agregas 20px de padding, la caja crece a 340px.
+   Con ella: el ancho final se mantiene en 300px y el padding se mete "hacia adentro".
+   
+   Facilita mucho los cálculos matemáticos en el diseño.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   1. WIDTH Y HEIGHT (Dimensiones)
+   ========================================= */
 
 /*
-    width y height
-
-    Define los tamaños de la caja
-    Son valores numericos que pueden tener diferentes unidades de medida
+   Definen el tamaño del contenido de la caja.
+   Si el contenido es texto y supera este tamaño, se desbordará 
+   (a menos que usemos la propiedad overflow, tema futuro).
 */
 
-/*
-
-Una caja sin contenido con width y height definidos con un fondo de color crimson
-
-*/
 .width-height {
-    background:azure;
+    background: lightblue; /* Color nombre estándar */
     width: 500px;
     height: 90px;
+    /* Centramos el texto verticalmente para que se vea mejor (truco de line-height) */
+    line-height: 90px; 
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid blue;
 }
 
-/*
-
-El uso de % en width y height con los inputs en este caso es un 90% del tamaño del contenedor que es el form que a su vez ocupa todo el espacio en pantalla disponible
-
+/* Formulario de ejemplo:
+   Aquí width: 300px define el ancho del contenedor padre.
+   margin: 20px auto; sirve para centrar el bloque horizontalmente.
 */
- form input, form button {
-    width: 90%;
-    box-sizing: border-box; /* ignoremos esto por ahora*/
-}
-
-/*
-En este caso text-align se utiliza para centrar horizontalmente los inputs y el boton
-*/
-
 form {
     text-align: center;
     width: 300px;
-    background: blue;
+    background: mistyrose; /* Un rojo muy suave */
+    padding: 20px;
+    margin: 20px 0; /* Margen arriba/abajo 20px, Izq/Der 0 */
+    border: 2px solid lightcoral;
 }
 
-.padding-10 {
-    background: orangered;
-    padding: 10px;
+/*
+   Aquí usamos porcentajes (%).
+   width: 90% significa que ocuparán el 90% del espacio de su padre (el form).
+*/
+form input, form button {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 8px;
 }
-.padding-20 {
-    background: orangered;
-    padding: 20px;
-}
-.padding-30 {
-    background: orangered;
-    padding: 30px;
-}
-.padding-40 {
-    background: orangered;
-    padding: 40px;
-}
-.padding-50 {
-    background: orangered;
-    padding: 50px;
-}
+
+/* =========================================
+   2. PADDING (Relleno Interno)
+   ========================================= */
+
+/* Short-hand (Atajo) de Padding:
+   1 valor:  padding: 10px; (Todos los lados)
+   2 valores: padding: 10px 20px; (Arriba/Abajo  Izq/Der)
+   3 valores: padding: 10px 20px 30px; (Arriba  Izq/Der  Abajo)
+   4 valores: padding: 10px 20px 30px 40px; (Arriba Der Abajo Izq - Sentido reloj)
+*/
 
 .padding-container {
-    background: blue;
-    text-align: center;
-
+    background: azure;
+    border: 2px dashed teal; /* Borde discontinuo color verde azulado */
+    padding: 20px;
+    text-align: center; /* Alinea las cajas internas al centro */
 }
 
 .padding-container div {
+    display: inline-block; /* Para ponerlos uno al lado del otro */
+    background: peachpuff; /* Color durazno suave */
+    margin: 10px;
+    /* vertical-align: top ayuda a que no se desalineen si el texto cambia */
+    vertical-align: top; 
+    border: 1px solid orange;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-20 {
+    /* 20px Arriba/Abajo, 40px Izquierda/Derecha */
+    padding: 20px 40px; 
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+/* =========================================
+   3. MARGIN (Espacio Externo)
+   ========================================= */
+
+/* El margen funciona igual que el padding en sintaxis (1, 2, 4 valores),
+   PERO es espacio transparente fuera del borde.
+   
+   CASO ESPECIAL: COLAPSO DE MÁRGENES
+   Si dos bloques están uno encima del otro, sus márgenes verticales NO se suman.
+   Si el de arriba tiene 30px y el de abajo 30px, la distancia total será 30px en vez de 60px.
+*/
+
+.margin-container {
+    background-color: lightgray; /* Fondo gris para ver el margen blanco/transparente */
+    padding: 1px; /* Truco para evitar que el margen se salga del contenedor */
+    border: 2px solid gray;
+}
+
+.caja-margin {
+    background: plum; /* Color violeta suave */
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    
+    /* Centrado horizontal automático + Margen vertical */
+    margin: 30px auto; 
+    
+    /* Al tener margin: 30px auto;
+       Tienen 30px arriba y 30px abajo.
+       Entre ellas debería haber 60px, pero verás que solo hay 30px.
+       Eso es el colapso.
+    */
+}
+
+/* Estilos para la nota informativa amarilla */
+.info-box {
+    background-color: lightyellow;
+    border-left: 5px solid gold;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   4. BORDER (Bordes)
+   ========================================= */
+
+/*
+   El borde es una propiedad compuesta. Necesita SIEMPRE:
+   1. Grosor (width) -> ej: 3px
+   2. Estilo (style) -> ej: solid, dashed, dotted, double
+   3. Color (color)  -> ej: red, blue
+   
+   Sintaxis: border: 3px solid red;
+*/
+
+.border-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.border-container div {
     display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: white;
+    margin: 10px;
+    
+}
+
+.border-solid {
+    border: 3px solid teal; /* Borde sólido color teal */
+}
+
+.border-rounded {
+    border: 3px dashed orange; /* Borde discontinuo naranja */
+    border-radius: 15px; /* Redondea las esquinas 15 pixeles */
+}
+
+.border-circle {
+    border: 4px double crimson; /* Borde doble color carmesí */
+    /* Para hacer un círculo perfecto:
+       1. La caja debe ser cuadrada (mismo ancho y alto)
+       2. border-radius debe ser 50%
+    */
+    border-radius: 50%; 
+}
+
+
+
+
+
+
+
+/* =========================================
+   6. CAJA DE ENLACES (Link Box)
+   ========================================= */
+
+.link-box {
+    /* Coloracion  */
+
+    background-color: azure;
+    border: 1px solid lightskyblue;
+    border-left: 5px solid dodgerblue;
+
+    /* Espaciado */
+
+    padding: 20px;
+    margin: 30px 20px 0 20px;
+    border-radius: 5px;
+}
+
+.link-box h3 {
+    /* Coloracion  */
+    color: navy;
+
+    /* Espaciado */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.link-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-box li {
+    /* Coloracion  */
+    background-color: whitesmoke;
+    border: 1px solid lightskyblue;
+
+    /* Espaciado */
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.link-box a {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
 }
