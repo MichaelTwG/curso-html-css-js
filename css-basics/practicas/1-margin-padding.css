@@ -24,7 +24,6 @@ hr {
     margin: 40px auto;
     background-color: navy;
     border-radius: 2px;
-    box-shadow: 0px 0px 200px 15px navy;
 }
 
 /* IMPORTANTE: box-sizing: border-box
@@ -63,4 +62,54 @@ hr {
 
     display: block;
     margin: 0 auto;
+}
+
+/* 
+
+CAJAS CON MARGIN 
+
+Se puede ver el colapso de margenes claramente, cada caja tiene 10px de margene a cada lado, sin embargo si miramos como se ve en el navegador entre la primer caja y la segunda no hay 20px de espacio entre ellas y lo mismo sucede entre la segunda caja y la tercera (esto es el colapso de margen)
+
+Cuando tenemos una elemento con margen-bottom y debajo un elemento con margen-top el navegador se queda con el espacio mas grande (esto lo hace para que los espacios no sean excesivos)
+*/
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    margin:10px;
+     /* Simulación visual del margen - al margen no se le pueden poner colores (es un espacio vacio)*/
+    box-shadow: 0 0 0 10px #ff6347aa;
+}
+
+/* SECCION DE CARD */
+
+.card-container {
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+.card {
+    background-color: coral;
+    text-align: center;
+    width: 350px;
+}
+
+.card h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-top:0;
+    padding-top: 14px;
+}
+.card h4 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.card p {
+    margin: 0;
+    font-size: 14px;
+    padding: 25px;
+    background-color: lightcoral;
+    text-align: justify;
 }
