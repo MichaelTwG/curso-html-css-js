@@ -1,0 +1,113 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    /* Padding general para que no quede pegado al borde del navegador */
+    padding-bottom: 100px; 
+}
+
+/* IMPORTANTE: box-sizing: border-box
+   
+   Esta propiedad es fundamental para el Box Model moderno.
+   Sin ella: si tienes 300px de ancho y agregas 20px de padding, la caja crece a 340px.
+   Con ella: el ancho final se mantiene en 300px y el padding se mete "hacia adentro".
+   
+   Facilita mucho los cálculos matemáticos en el diseño.
+*/
+* {
+    box-sizing: border-box;
+}
+
+div div {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: aqua;
+    padding: 25px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   BORDER
+   ========================================= */
+
+.border {
+    border-width: 6px;
+    border-color: skyblue;
+    border-style: solid;
+    
+    /* Lo mismo podemos hacer con el short-hand border */
+    
+    border: 6px solid skyblue;
+
+    /* Border radius es independiente */
+    border-radius: 12px;
+}
+
+.border-l {
+    border-left: 6px solid skyblue;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.border-r {
+    border-right: 6px solid skyblue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.border-t {
+    border-top: 6px solid skyblue;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.border-b {
+    border-bottom: 6px solid skyblue;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.border-radius {
+    border: 6px solid skyblue;
+    border-radius: 20px 0 0 0; /* top-left */
+    border-radius: 0 20px 0 0; /* top-right */
+    border-radius: 0 0 20px 0; /* bottom-right */
+    border-radius: 0 0 0 20px; /* bottom-left */
+}
+
+/* =========================================
+   Inputs
+   ========================================= */
+
+form{
+    margin: auto;
+    text-align: center;
+    margin: 20px auto;
+    width: 450px;
+    background-color: darkslategrey;
+    color: greenyellow;
+    padding: 15px;
+    padding-top: 30px;
+    border-radius: 30px 30px 30px 0;
+}
+
+form input {
+    width: 90%;
+    padding: 6px 9px;
+    margin: 5px;
+    border:none;
+    border-bottom: 3px solid greenyellow;
+    background-color: transparent;
+    color: greenyellow;
+}

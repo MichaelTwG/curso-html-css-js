@@ -1,0 +1,146 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    /* Padding general para que no quede pegado al borde del navegador */
+    padding-bottom: 100px; 
+}
+
+/* =========================================
+   ESTILOS DE LA CAJA DE ENLACES (Link Box)
+   ========================================= */
+
+.link-box {
+    /* Coloracion  */
+
+    background-color: azure;
+    border: 1px solid lightskyblue;
+    border-left: 5px solid dodgerblue;
+
+    /* Espaciado */
+
+    padding: 20px;
+    margin: 30px 20px 0 20px;
+    border-radius: 5px;
+}
+
+.link-box h3 {
+    /* Coloracion  */
+    color: navy;
+
+    /* Espaciado */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.link-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-box li {
+    /* Coloracion  */
+    background-color: whitesmoke;
+    border: 1px solid lightskyblue;
+
+    /* Espaciado */
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.link-box a {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+}
+
+/* =========================================
+   ESTILOS DEFECTO DE CLASE BOX
+   ========================================= */
+
+.box{
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    background-color: black;
+}
+
+/* =========================================
+   COLORES CON RGB - me dieron ganas de crear un color picker
+   ========================================= */
+.rgb-1 {
+    background-color: rgb(180, 230, 0);
+}
+
+.rgb-2 {
+    background-color: rgb(160, 100, 220);
+}
+
+/* =========================================
+   COLORES CON RGBA
+   ========================================= */
+   
+.rgba-1 {
+    background-color: rgba(180, 230, 0, 50);
+}
+
+.rgba-2 {
+    background-color: rgba(160, 100, 220, 50);
+}
+
+/* =========================================
+   COLORES CON HSL
+   ========================================= */
+.hsl-1 {
+    background-color: hsl(246, 30%, 80%);
+}
+
+.hsl-2 {
+    background-color: hsl(0, 100%, 50%);
+}
+
+/* =========================================
+   COLORES CON HSLA
+   ========================================= */
+
+.hsla-1 {
+    background-color: hsla(246, 30%, 80%, 50%);
+}
+
+.hsla-2 {
+    background-color: hsla(0, 100%, 50%, 50%);
+}
+
+/* =========================================
+   COLORES CON HEXADECIMAL
+   ========================================= */
+
+.hex-1{
+    background-color: #00ff00;
+}
+.hex-2{
+    background-color: #0f0;
+}
+/* =========================================
+   COLORES CON HEXADECIMAL CON ALPHA
+   ========================================= */
+.hexa-1{
+    background-color: #00ff0044;
+}
+.hexa-2{
+    background-color: #0f44;
+}

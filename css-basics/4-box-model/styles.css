@@ -202,12 +202,30 @@ form input, form button {
 
 
 
+/* =========================================
+   5. BOX SIZING (Link Box)
+   ========================================= */
+.box {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 3px solid lightskyblue;
+    margin: 20px;
 
+    background-color: lightblue;
+}
 
+.sizing-content {
+    box-sizing: content-box; /* DEFAULT los tamaños de width, padding y border se suman*/
+}
+
+.sizing-border {
+    box-sizing: border-box; /* se respeta el width que le demos*/
+}
 
 
 /* =========================================
-   6. CAJA DE ENLACES (Link Box)
+   ESTILOS DE LA CAJA DE ENLACES (Link Box)
    ========================================= */
 
 .link-box {

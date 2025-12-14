@@ -1,0 +1,84 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue;
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #662;
+
+    background-image: 
+        repeating-radial-gradient(
+            circle at center, /* Dibuja un círculo desde el centro */
+            rgba(255, 255, 255, 0.05) 0px, /* El punto comienza aquí */
+            rgba(255, 255, 255, 0.05) 1px, /* El punto termina aquí (1px de grosor) */
+            transparent 1px,
+            transparent 5px /* Distancia de repetición */
+        );
+    background-size: 20px 20px;
+}
+
+/* =========================================
+   Unidades de Medida
+   ========================================= */
+
+.exemple {
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    margin-top:15vh;
+   
+    background-color: #ee8;
+    padding: 5vh 5vw;
+    border-left: 6px solid #992;
+    font-size: 16px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px #ee86;
+}
+
+.exemple strong {
+    margin: 0;
+    font-size: 24px;
+    color: #992;
+}
+
+.exemple span {
+    color: #bb4;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.exemple p {
+    color: #aa2;
+    text-align: justify;
+    width: 80%; /* El width del elemento padre es 500px, entonces 90% equivaldria a 450px */ 
+    font-size: 1em; /* equivalente a 14px */
+    margin-top: 30px;
+}
+
+.exemple a {
+    padding: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #ffa;
+    color: #992;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid #aa2;
+    margin-left: 6px;
+}
+.exemple a:hover {
+    background-color: #992;
+    color: #ffa;
+}

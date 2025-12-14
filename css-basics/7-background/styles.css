@@ -1,0 +1,122 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    /* Padding general para que no quede pegado al borde del navegador */
+    padding-bottom: 100px; 
+}
+
+/* =========================================
+   ESTILOS DE LA CAJA DE ENLACES (Link Box)
+   ========================================= */
+
+.link-box {
+    /* Coloracion  */
+
+    background-color: azure;
+    border: 1px solid lightskyblue;
+    border-left: 5px solid dodgerblue;
+
+    /* Espaciado */
+
+    padding: 20px;
+    margin: 30px 20px 0 20px;
+    border-radius: 5px;
+}
+
+.link-box h3 {
+    /* Coloracion  */
+    color: navy;
+
+    /* Espaciado */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.link-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-box li {
+    /* Coloracion  */
+    background-color: whitesmoke;
+    border: 1px solid lightskyblue;
+
+    /* Espaciado */
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.link-box a {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+}
+
+.info-box {
+    background-color: #ee8;
+    padding: 20px;
+    border-left: 5px solid #aa3;
+}
+
+.info-box p {
+    color: #aa3;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* =========================================
+   Background
+
+   tiene muchas propiedades
+
+   backgrouind-color - para cambiar el color de fondo
+   backgrouind-image - para poner una imagen de fondo (se puede utilizar junto con background-color)
+   background-size - para cambiar el tamaño de la imagen de fondo, se puede poner contain (asegura que se muestre la imagen una vez) , cover (agranda la imagen para que ocupe todo el espacio del contenedor posible) o un tamaño con medidas ej: 100px, 50vw o 100%  
+   background-position - para cambiar la posición de la imagen de fondo, podemos usar top, bottom, left, right o podemos utilizar medidas positivas y negativas para cambiar la posicion en el eje X e Y.
+   backround-repeat - para repetir la imagen de fondo, podemos usar no-repeat, repeat-x, repeat-y o repeat
+   background-attachment - fixed (fijo) o scroll (scroll)
+
+   Si sabemos que vamos a utilizar todas las propiedades podemos utilizar el short-hand background
+
+   background: imagen-url position size repeat atachment color;
+
+   ========================================= */
+
+body {
+    background-color: #086;
+    margin: 0;
+
+
+}
+
+.box {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    background-color: #f3e6;
+    background-image: url("https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* interesante fondo fijo */
+
+    /* Acirtamos la anterior configuracion con background*/
+
+    background: url("https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D") center / cover no-repeat fixed #f3e6;
+}

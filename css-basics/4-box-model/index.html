@@ -25,7 +25,7 @@
         <li><code>margin</code>: Espacio externo (separación).</li>
     </ol>
 
-    <h2>1. Tamaño (width y height)</h2>
+    <h2>1. Tamaño (<code>width</code> y <code>height</code>)</h2>
     <div class="width-height">
         Caja con width: 500px y height: 90px
     </div>
@@ -36,7 +36,7 @@
         <button type="submit">Iniciar sesión</button>
     </form>
     
-    <h2>2. Relleno (padding)</h2>
+    <h2>2. Relleno (<code>padding</code>)</h2>
     <p>El <code>padding</code> es el espacio entre el contenido y el borde. Acepta 1, 2 o 4 valores (orden reloj: Arriba, Derecha, Abajo, Izquierda).</p>
 
     <div class="padding-container">
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <h2>3. Margen (margin)</h2>
+    <h2>3. Margen (<code>margin</code>)</h2>
     <p>Espacio invisible fuera de la caja. Separa los elementos entre sí.</p>
     
     <div class="margin-container">
@@ -68,7 +68,7 @@
         <p><strong>Tip de Centrado:</strong> Para centrar una caja horizontalmente usa: <code>margin: 0 auto;</code></p>
     </div>
 
-    <h2>4. Borde (border)</h2>
+    <h2>4. Borde (<code>border</code>)</h2>
     <p>El borde necesita 3 datos: grosor, estilo y color. Ej: <code>border: 3px solid black;</code></p>
     
     <div class="border-container">
@@ -88,18 +88,17 @@
 
     <hr>
 
-    <h2>5. Tipos de Caja (display)</h2>
-    <p>Para entender por qué el <code>padding</code> o <code>width</code> a veces no funcionan como esperamos, debemos aprender la propiedad <code>display</code>:</p>
-    <ul>
-        <li><strong>block:</strong> (Como los <code>div</code> de arriba). Ocupan todo el ancho.</li>
-        <li><strong>inline:</strong> (Como este <span>texto</span>). Solo ocupan lo que miden sus letras. Ignoran el ancho y alto.</li>
-        <li><strong>inline-block:</strong> Una mezcla de ambos.</li>
-    </ul>
+    <h2>5. Establecer el tamaño total de la caja con <code>Box Sizing</code></h2>
+    <p><code>box-sizing</code> es la propiedad que define como se va a calcular el tamaño total de la caja, es decir si definimos que una caja tena un <code>widht</code> de 100px, luego le agregamos un <code>padding</code> de 20px (todos los lados) y un <code>border</code> de 3px (todos los lados), entonces el <code>width</code> final de la caja seria 146px en total (con el valor <code>content-box</code>), en el caso de que la propiedad este definida como <code>border-box</code> se calcularia internamente para ocupar 100px de ancho en total, ocuparia 54px de <code>width</code>, 20px de <code>padding</code> mas 3px de <code>border</code> (recordar que al poner padding 20px se le agrega 20px a la izquierda y 20px a la derecha, lo mismo sucede con border). Entonces <code>54px + 20px + 20px + 3px + 3px = 100px</code>.</p>
+
+    <div class="box sizing-content">content-box</div>
+    <div class="box sizing-border">border-box</div>
 
     <div class="link-box">
         <h3>Links a diferentes ejercicios practicos</h3>
         <ul>
-            <li><a href="../practicas/1-margin-padding.html">Practicas</a></li>
+            <li><a href="../practicas/1-margin-padding.html">Margin y Padding</a></li>
+            <li><a href="../practicas/2-border.html">Border</a></li>
         </ul>
     </div>
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../index.html">Volver al menú principal</a>
+    <h1>Unidades de medida</h1>
+
+    <div class="link-box">
+        <h3>Links a diferentes ejercicios practicos</h3>
+        <ul>
+            <li><a href="../practicas/1-margin-padding.html">Margin y Padding</a></li>
+            <li><a href="../practicas/2-border.html">Border</a></li>
+        </ul>
+    </div>
+    <h1>Unidades de medida</h1>
+
+    <h2>Unidades Absolutas</h2>
+    <ul>
+        <li>Pulgadas o<code>in</code></li>
+        <li>Centímetros o<code>cm</code></li>
+        <li>Picas o<code>pc</code></li>
+        <li>Puntos o<code>pt</code></li>
+        <li>Pixeles o<code>px</code></li>
+    </ul>
+    <div class="info-box">
+        <p>pt y pc vienen del mundo de la imprenta tradicional</p>
+        <p>Generalmente la mas utilizada es <code>px</code></p>
+    </div>
+
+    <h2>Unidades Relativas</h2>
+    <p>El valor de las unidades relativas dependen de otro valor, dependiendo de la propiedad el valor base va a ser uno u otro</p>
+
+    <ul>
+        <li><code>em</code> - Depende del font-size del elemento padre.</li>
+        <li><code>rem</code> - Depende del elemento raiz (html)</li>
+        <li>Porcentajes<code>%</code> - Depende del tamaño del elemento padre.</li>
+    </ul>
+    <h3>em</h3>
+    <p><code>1em</code> es equivalente al tamaño de fuente del elemento padre. Si tenemos un div con la propiedad <code>font-size: 20px;</code> y dentro tenemos otro elemento y le ponemos <code>font-size:1em;</code> - equivaldria a 20px en este caso. Si en vez de eso le ponemos <code>font-size:2em;</code> - equivaldria a 20px.</p>
+    <div class="info-box">
+        <p>Si el elemento padre no tiene definido <code>font-size</code> va a buscar al elemento padre de ese elemento, y asi sucesivamente hasta llegar al elemento que tenga un <code>font-size</code> declarado. si no encuntra usa el valor por defecto que es <code>16px</code>.</p>
+    </div>
+    <h3>rem</h3>
+    <p>Similar a <code>em</code> solamente que en vez del elemento pádre se fija en los valores de <code>font-size</code> de el elemento raiz que es <code>html</code>. Si html no tiene un <code>font-size</code> definido se utiliza el valor defecto que es <code>16px</code>.</p>
+    
+    <h3>Porcentajes</h3>
+    <p>
+        Si tenemos un div con un <code>width: 300px;</code> con un div dentro, si a el div (hijo) le ponemos <code>width: 50%;</code> entonces nuestro div (hijo) tendria un width equivalente a <code>150px</code>
+    </p>
+
+    <div class="exemple">
+        <strong>Has recibido un mensaje <span>(hace un momento)</span></strong>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolor numquam doloremque ab dignissimos repellat, sapiente earum labore vel eligendi quas ipsam est a perspiciatis harum fugiat. Deserunt, eveniet ad.</p>
+    </div>
+
+    <h2>viewport-height y viewport-width</h2>
+    <p>Ahora siguen 2 unidades relativas importantes que son viewport-height (<code>vh</code>) y viewport-width (<code>vw</code>).</p>
+    <p>Son muy utiles para un diseño de interfaz responsive (adaptable a muchos tamaños de pantalla)</p>
+
+    <div class="link-box">
+        <h3>Link del ejemplo</h3>
+        <ul>
+            <li><a href="../practicas/3-vieport.html">Margin y Padding</a></li>
+        </ul>
+    </div>
+
+    <h2>Viewport-max y Viewport-min</h2>
+    <p>Viewport max y viewport min utilizan viewport-height y viewport-width como referencia de medida. <code>vmax</code> va a ser el que tenga mayor medida entre <code>vw</code> y <code>vh</code>. En el caso de <code>vmin</code> va a ser el que tenga menor tamaño entre <code>vw</code> y <code>vh</code>.<p>
+
+    <p><b>Por ejemplo:</b> si <code>vw = 1024px</code> y <code>vh = 768px</code> entonces <code>vmax = 1024px = vw </code> y <code>vmin = 768px = vh</code><p>
+
+    <p><b>Por el contrario:</b> si <code>vw = 360px</code> y <code>vh = 678px</code> entonces <code>vmax = 678px = vh</code> y <code>vmin = 360px = vw</code><p>
+</body>
+</html>

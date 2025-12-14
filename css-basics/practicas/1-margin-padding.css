@@ -83,33 +83,46 @@ Cuando tenemos una elemento con margen-bottom y debajo un elemento con margen-to
 }
 
 /* SECCION DE CARD */
-
+ 
 .card-container {
     padding: 30px;
-    background-color: black;
-    color: white;
-}
-.card {
-    background-color: coral;
-    text-align: center;
-    width: 350px;
+    background-color: #fff;
+    color: #eee;
 }
 
-.card h3 {
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-top:0;
-    padding-top: 14px;
+.card {
+    background-color: #79f;
+    text-align: center;
+    width: 380px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 10px;
+    box-shadow: 0 0 45px #00f7;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
-.card h4 {
-    font-size: 18px;
+
+.card-img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.card-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.card-subtitle {
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.5px;
-}
-.card p {
     margin: 0;
-    font-size: 14px;
-    padding: 25px;
-    background-color: lightcoral;
+    margin-top: 5px;
+}
+.card-content {
+    font-size: 12px;
+    padding: 10px;
+    padding-bottom: 0px;
     text-align: justify;
 }
