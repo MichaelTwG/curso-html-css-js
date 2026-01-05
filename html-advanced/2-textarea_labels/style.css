@@ -1,0 +1,161 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background-image: radial-gradient(#444,#222);
+    color: #eee;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.section {
+    width: 80vw;
+    margin: 40px auto;
+    padding: 20px;
+    background: #4448;
+    color: #eee;
+    border-radius: 20px;
+    border: 3px solid #eee8
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 20px;
+    background-color: transparent;
+    color: #777;
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 3px #5558;
+    font-size: 12px;
+}
+
+a:hover {
+    background-image: radial-gradient(transparent, #333);
+    box-shadow: 0px 0px 20px 3px #6668;
+    color:#ccc
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+/* =========================================
+   FORM - TEXTAREA - LABELS
+   ========================================= */
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+form {
+    background-color: transparent;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 0px 45px #9995;
+    margin-top: 50px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.form_input {
+    margin: 0 20px;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+/*
+ =========================================
+    TEXTAREA 
+ ========================================= 
+*/
+
+textarea {
+    resize: vertical; /*        resize: both (vertical y horizontal) / vertical / horizontal / none       */
+    min-height: 100px;
+    max-height: 200px;
+}
+
+label {
+    line-height: 3;
+    color: #888
+}
+
+#newsletter {
+    width: auto;
+    height: 13px;
+}
+
+#newsletter_label {
+    margin-left: 20px;
+}
+
+ /*
+=======================================
+        BUTON TYPE SUBMIT
+=======================================
+ */
+
+ .btn_submit {
+    display: block; /*   Para que margin:auto funcione, debe comportarse como elemento en bloque   */
+    margin: 40px auto; /*   40px arriba/abajo y auto a los lados (centrado)    */
+
+    /* 2. Dimensiones */
+    width: 80%; /* Que no ocupe todo el ancho, se ve mas elegante */
+    max-width:300px; /* Tope máximo para pantallas grandes */
+    padding: 12px 24px; /* Darle algo de cuerpo */
+
+    /* 3. Estetica base */
+    background-color: transparent;
+    color:#eee;
+    border: 1px solid #666;
+    border-radius: 50px; /* Borde tipo "pildora" */
+
+    /* 4. Tipografia */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    cursor:pointer;
+
+    /* 5. Suavizado de animacion */
+    transition: all .4s ease;
+ }
+
+ /* Estado Hover (al pasar el mouse por encima del elemento) */
+ .btn_submit:hover {
+    background-color: #eee; /* invertimos colores de fondo y texto */
+    color: #222;
+    border-color: #eee;
+    box-shadow: 0 0 20px #ddd6; /* Efecto Neón */
+    transform: scale(1.05); /* Crece un poquito */
+ }

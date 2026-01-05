@@ -1,0 +1,451 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background-image: radial-gradient(#444,#222);
+    color: #eee;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.section {
+    width: 80vw;
+    margin: 40px auto;
+    padding: 20px;
+    background: #4448;
+    color: #eee;
+    border-radius: 20px;
+    border: 3px solid #eee8
+}
+
+.home_btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 20px;
+    background-color: transparent;
+    color: #777;
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 3px #5558;
+    font-size: 12px;
+}
+
+.home_btn:hover {
+    background-image: radial-gradient(transparent, #333);
+    box-shadow: 0px 0px 20px 3px #6668;
+    color:#ccc
+}
+
+
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+/* =========================================
+   FORM - TEXTAREA - LABELS
+   ========================================= */
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+form {
+    background-color: transparent;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 0px 45px #9995;
+    margin-top: 50px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+/*
+ =========================================
+    TEXTAREA 
+ ========================================= 
+*/
+
+textarea {
+    resize: vertical; /*        resize: both (vertical y horizontal) / vertical / horizontal / none       */
+    min-height: 100px;
+    max-height: 200px;
+}
+
+label {
+    line-height: 3;
+    color: #888
+}
+
+#terms_conditions {
+    width: auto;
+    height: 13px;
+}
+
+#terms_conditions_label {
+    margin-left: 20px;
+}
+
+/*
+ =========================================
+    FIELDSET - LEGEND 
+ ========================================= 
+ */
+
+ fieldset{
+    /* 1. Sincronizamos con el estilo de tus inputs */
+    border: 1px solid #666; 
+    border-radius: 9px;
+    
+    /* 2. Espaciado */
+    margin: 20px;
+    padding: 10px 20px 20px 20px; /* Un poco más de aire abajo */
+    
+    background-color: rgba(255, 255, 255, 0.02); /* Un toque casi invisible de fondo */
+ }
+
+ legend {
+    /* 3. Color gris como los labels */
+    color: #888;
+    padding: 0 10px; /* Para que la línea del borde no toque el texto */
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*
+ =========================================
+    SELECT - Dicicil de estilizar
+ ========================================= 
+ */
+
+ select {
+    /* 1. Reset básico para poder darle esitlo */
+    appearance: none; /* Quita la flecha por defecto en algunos navegadores */
+    -webkit-appearance: none; /* Quita los estilos por defecto de webkit */
+
+    /* Sincronizamos con los inputs */
+    width: 100%;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid #666;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+    /* 3. El truco de la flecha personalizada */
+    /* Como quitamos la flecha con appearance:none, podemos poner una propia */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+ }
+
+ /* Estilo para las opciones dentro del desplegable*/
+ select option {
+    background-color: #333;
+    color: #ddd;
+ }
+
+ /*
+=======================================
+        BUTON TYPE SUBMIT
+=======================================
+ */
+
+ .btn_submit {
+    display: block; /*   Para que margin:auto funcione, debe comportarse como elemento en bloque   */
+    margin: 40px auto; /*   40px arriba/abajo y auto a los lados (centrado)    */
+
+    /* 2. Dimensiones */
+    width: 80%; /* Que no ocupe todo el ancho, se ve mas elegante */
+    max-width:300px; /* Tope máximo para pantallas grandes */
+    padding: 12px 24px; /* Darle algo de cuerpo */
+
+    /* 3. Estetica base */
+    background-color: transparent;
+    color:#eee;
+    border: 1px solid #666;
+    border-radius: 50px; /* Borde tipo "pildora" */
+
+    /* 4. Tipografia */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    cursor:pointer;
+
+    /* 5. Suavizado de animacion */
+    transition: all .4s ease;
+ }
+
+ /* Estado Hover (al pasar el mouse por encima del elemento) */
+ .btn_submit:hover {
+    background-color: #eee; /* invertimos colores de fondo y texto */
+    color: #222;
+    border-color: #eee;
+    box-shadow: 0 0 20px #ddd6; /* Efecto Neón */
+    transform: scale(1.05); /* Crece un poquito */
+ }
+
+/*
+=======================================
+        DETAILS & SUMMARY - FAQ
+=======================================
+*/
+
+/* El truco para estilizar estos elementos es tratar a DETAILS como un BOTÓN */
+
+details {
+    margin: 20px;
+    background-color: #0002; /* fondo sutilmente mas oscuro */
+    border-radius: 8px;
+    border: 1px solid transparent; /* Lo preparamos para un borde al abrirse */
+    transition: all .3s ease;
+}
+
+/* El "título" clickeable */
+summary {
+    padding: 15px;
+    cursor: pointer;
+    color: #888;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover en el título */
+summary:hover {
+    color: #eee;
+}
+
+/* El contenido que se despleiega */
+details p {
+    padding: 0 20px 20px 20px; /* Pading interno para que el texto respire*/
+    margin: 0;
+    color: #ccc;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* ⚡ Estilos cuando esta ABIERTO ⚡*/
+/* El selector de atributo [open] destaca cuando el usuario lo desplegó */
+
+details[open] {
+    border-color: #666;
+    background-color: #fff2;
+}
+
+details[open] summary {
+    color: #eee; /* El titulo se vuelve blanco brillante */
+    border-bottom: 1px solid #444; /* Línea separadora sutil */
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   INDICE (Términos y Condiciones)
+   ========================================= */
+
+/* 1. ACTIVAR DESPLAZAMIENTO SUAVE
+   Esto hace que al clicar el link, la pantalla baje deslizándose
+   en lugar de saltar de golpe. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contenedor principal del acordeón */
+.index {
+    margin-bottom: 30px; /* Espacio debajo del índice */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro sutil */
+    border-radius: 8px;
+    border: 1px solid #444; /* Borde gris oscuro */
+    transition: all 0.3s ease;
+}
+
+/* El título "Indice" clickeable */
+.index-summary {
+    padding: 15px;
+    cursor: pointer;
+    color: #eee;
+    font-weight: 600;
+    list-style: none; /* Opcional: quita el triángulo en algunos navegadores */
+    outline: none;
+}
+
+/* Estilos para la lista ordenada (ol) */
+.index-list {
+    padding-left: 40px; /* Sangría para que los números no se peguen al borde */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Cada ítem de la lista (li) */
+.index-list-item {
+    margin-bottom: 10px; /* Espacio entre renglones */
+    color: #666; /* Color del número de la lista (1., 2., 3...) */
+}
+
+/* Estilo de los enlaces (a) dentro de los ítems */
+.index-list-item a {
+    color: #bbb; /* Gris claro elegante para el texto */
+    text-decoration: none; /* Quitamos el subrayado feo por defecto */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    transition: all 0.3s ease; /* Suavizamos el cambio de color */
+    display: inline-block; /* Necesario para que la transformación funcione bien */
+}
+
+/* Efecto Hover (cuando pasas el mouse sobre el link) */
+.index-list-item a:hover {
+    color: #fff; /* Se ilumina a blanco brillante */
+    transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3); /* Brillo tipo "glow" */
+}
+
+/* Estilos opcionales cuando el acordeón está ABIERTO */
+.index[open] {
+    background-color: rgba(255, 255, 255, 0.02); /* Se aclara un poco el fondo */
+    border-color: #666;
+}
+
+.index[open] .index-summary {
+    border-bottom: 1px solid #444; /* Línea separadora entre título y lista */
+}
+
+/* =========================================
+   ENLACES DE TEXTO (Inline Links)
+   ========================================= */
+
+/* Estilo específico para enlaces dentro de labels o párrafos */
+label a, p a {
+    color: #ccc; /* Más claro que el #888 del label para destacar */
+    text-decoration: none; /* Quitamos el subrayado azul feo */
+    border-bottom: 1px dotted #666; /* Subrayado sutil punteado */
+    transition: all 0.3s ease;
+    padding-bottom: 1px; /* Un poco de aire entre texto y línea */
+}
+
+/* Efecto Hover */
+label a:hover, p a:hover {
+    color: #fff; /* Blanco brillante */
+    border-bottom: 1px solid #fff; /* La línea se vuelve sólida y blanca */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Pequeño resplandor neón */
+    cursor: pointer;
+}
+
+/* =========================================
+   ESTILOS PARA PÁGINAS LEGALES (Terms.html)
+   ========================================= */
+
+   .legal-container {
+    max-width: 800px; /* Limitamos el ancho para que sea cómodo de leer */
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo sutilmente oscuro */
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.legal-container h1 {
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.legal-container h2 {
+    text-align: left; /* Alineamos a la izquierda para lectura */
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ddd;
+    border-bottom: 1px solid #444; /* Línea separadora elegante */
+    padding-bottom: 10px;
+}
+
+.legal-container p, 
+.legal-container li {
+    line-height: 1.6; /* Altura de línea para mejorar legibilidad */
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.legal-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.last-updated {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+/* Botón de volver (Reutilizando estilos si ya tienes botones, o creando uno simple) */
+.home_btn {
+    display: inline-block;
+    margin: 20px;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+.home_btn:hover {
+    color: #fff;
+}
+
+.donwload-terms{
+    border: 1px solid #444;
+    padding: 0 20px;
+    border-radius: 8px;
+    background-color: #0002;
+    transition: all .3s ease;
+}
+
+.donwload-terms p{
+    font-size: .8em;
+    color: #666;   
+}
+
+.donwload-terms a{
+    text-decoration: none;
+    font-size: .7em;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.donwload-terms a span {
+    margin-left: 8px;
+}
+

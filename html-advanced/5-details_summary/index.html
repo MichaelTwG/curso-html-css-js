@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details and Summary</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../index.html">Vovler al Menú</a>
+    <h1>Details and Sumary</h1>
+    <form action="">
+        <h2>Contáctanos</h2>
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <div class="form_input">
+                <label for="user_name">Nombre completo</label>
+                <input required id="user_name" type="text" placeholder="Ej: John Doe">
+            </div>
+            <div class="form_input">
+                <label for="user_email">Email</label>
+                <input required id="user_email" type="email" placeholder="Ej: john.mckinley@examplepetstore.com">
+            </div>
+            <div class="form_input">
+                <label for="mesaje">Mensaje</label>
+                <textarea required id="mesaje" placeholder="I've wanted to write to you for a while about..."></textarea> <!-- readonly / disabled / row="3" -->
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Perfil Deportivo</legend>
+            <div class="form_input">
+                <label for="experience">Selecciona tu nivel de experiencia entrenando</label>
+                <select required name="training_experience" id="experience">
+                    <option value="beginner">Principiante (menos de 1 año)</option>
+                    <option value="intermediate">Intermedio (entre 1 y 2 años)</option>
+                    <option value="advanced">Avanzado (más de 2 años)</option>
+                </select>
+            </div>
+            <div class="form_input">
+                <label for="favorite_sport">¿Cúal es tu deporte favorito?</label>
+                <input type="text" id="favorite_sport" name="favorite_sport" list="favorite_sport_list" placeholder="Escribe tu deporte favorito o elije entre las opciones recomendadas...">
+                <datalist id="favorite_sport_list">
+                    <option value="fútbol">Un clasico...</option>
+                    <option value="baloncesto">Solo los altos juegan?...</option>
+                    <option value="crossfit">Que es eso .jpg?...</option>
+                    <option value="natación">El que entrena todo el cuerpo...</option>
+                </datalist>
+            </div>
+        </fieldset>
+
+        
+        <details>
+            <summary>¿Necesitas ayuda para elegir tu nivel?</summary>
+            <p>
+                <strong>Principiante:</strong> Si nunca has pisado un gimnasio.<br>
+                <strong>Intermedio:</strong> Si conoces la técnica de los ejercicios básicos.<br>
+                <strong>Avanzado:</strong> Si llevas años entrenando con planificación.
+            </p>
+        </details>
+
+        <div class="form_input">
+            <label for="newsletter" id="newsletter_label">¿Quieres suscribirte a nuestra newsletter?</label>
+            <input type="checkbox" name="newsletter" id="newsletter">
+        </div>
+        <button class="btn_submit" type="submit">Enviar mensaje</button>
+    </form>
+    </body>
+    </html>

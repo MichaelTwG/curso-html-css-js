@@ -1,0 +1,218 @@
+/* =========================================
+   CONFIGURACIÓN INICIAL
+   ========================================= */
+
+   code, pre {
+    font-family: 'Fira Code', monospace;
+    color: blue; /* Usamos crimson para destacar código */
+    background-color: gainsboro; /* Fondo gris suave para resaltar */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background-image: radial-gradient(#444,#222);
+    color: #eee;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.section {
+    width: 80vw;
+    margin: 40px auto;
+    padding: 20px;
+    background: #4448;
+    color: #eee;
+    border-radius: 20px;
+    border: 3px solid #eee8
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 20px;
+    background-color: transparent;
+    color: #777;
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 3px #5558;
+    font-size: 12px;
+}
+
+a:hover {
+    background-image: radial-gradient(transparent, #333);
+    box-shadow: 0px 0px 20px 3px #6668;
+    color:#ccc
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+/* =========================================
+   FORM - TEXTAREA - LABELS
+   ========================================= */
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+form {
+    background-color: transparent;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 0px 45px #9995;
+    margin-top: 50px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+/*
+ =========================================
+    TEXTAREA 
+ ========================================= 
+*/
+
+textarea {
+    resize: vertical; /*        resize: both (vertical y horizontal) / vertical / horizontal / none       */
+    min-height: 100px;
+    max-height: 200px;
+}
+
+label {
+    line-height: 3;
+    color: #888
+}
+
+#newsletter {
+    width: auto;
+    height: 13px;
+}
+
+#newsletter_label {
+    margin-left: 20px;
+}
+
+/*
+ =========================================
+    FIELDSET - LEGEND 
+ ========================================= 
+ */
+
+ fieldset{
+    /* 1. Sincronizamos con el estilo de tus inputs */
+    border: 1px solid #666; 
+    border-radius: 9px;
+    
+    /* 2. Espaciado */
+    margin: 20px;
+    padding: 10px 20px 20px 20px; /* Un poco más de aire abajo */
+    
+    background-color: rgba(255, 255, 255, 0.02); /* Un toque casi invisible de fondo */
+ }
+
+ legend {
+    /* 3. Color gris como los labels */
+    color: #888;
+    padding: 0 10px; /* Para que la línea del borde no toque el texto */
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*
+ =========================================
+    SELECT - Dicicil de estilizar
+ ========================================= 
+ */
+
+ select {
+    /* 1. Reset básico para poder darle esitlo */
+    appearance: none; /* Quita la flecha por defecto en algunos navegadores */
+    -webkit-appearance: none; /* Quita los estilos por defecto de webkit */
+
+    /* Sincronizamos con los inputs */
+    width: 100%;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid #666;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+    /* 3. El truco de la flecha personalizada */
+    /* Como quitamos la flecha con appearance:none, podemos poner una propia */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+ }
+
+ /* Estilo para las opciones dentro del desplegable*/
+ select option {
+    background-color: #333;
+    color: #ddd;
+ }
+
+ /*
+=======================================
+        BUTON TYPE SUBMIT
+=======================================
+ */
+
+ .btn_submit {
+    display: block; /*   Para que margin:auto funcione, debe comportarse como elemento en bloque   */
+    margin: 40px auto; /*   40px arriba/abajo y auto a los lados (centrado)    */
+
+    /* 2. Dimensiones */
+    width: 80%; /* Que no ocupe todo el ancho, se ve mas elegante */
+    max-width:300px; /* Tope máximo para pantallas grandes */
+    padding: 12px 24px; /* Darle algo de cuerpo */
+
+    /* 3. Estetica base */
+    background-color: transparent;
+    color:#eee;
+    border: 1px solid #666;
+    border-radius: 50px; /* Borde tipo "pildora" */
+
+    /* 4. Tipografia */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    cursor:pointer;
+
+    /* 5. Suavizado de animacion */
+    transition: all .4s ease;
+ }
+
+ /* Estado Hover (al pasar el mouse por encima del elemento) */
+ .btn_submit:hover {
+    background-color: #eee; /* invertimos colores de fondo y texto */
+    color: #222;
+    border-color: #eee;
+    box-shadow: 0 0 20px #ddd6; /* Efecto Neón */
+    transform: scale(1.05); /* Crece un poquito */
+ }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metatags - Comments - Favicons</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../index.html">Vovler al Menú</a>
+    <h1>Metatags - Comments - Favicons</h1>
+    <div class="section">
+        <h2>Comments</h2>
+        <p>Un comentario es un codigo que el navegador no interpreta, es decir que no se muestra en la pagina web. Esta destinado a ser como una nota para los desarolladores. Se utiliza para describir que funciones tiene el codigo, como se utiliza, etc. Son importantes por dos razones la primera es que si volvemos a trabajar en ese codigo despues de mucho tiempo seguramente allamos olvidado que es lo que estabamos haciendo. El otro motivo es que si un desarollador que no seamos nosotros empieza a trabajar con nosotros o hereda el proyecto podra entender cuales eran tus intenciones con mas claridad.</p>
+        
+        <!-- Esto es un comentario, en html se escriben como una etiqueta, ademas podemos escribir varias lineas de codigo sin problema, tambien podemos utilizarlo para ver los cambios en la web si quitamos un elemento -->
+        
+        <!-- <p>Esto es un <span>parrafo</span></p> -->
+        
+        <p>En visual studio code podemos utilizar un atajo de teclado, lo primero que tenemos que hacer es seleccionar el codigo que queremos comentar y luego precionar control + k soltamos las teclas anteriores y luego pesionamos c. si queremos podemos descomentar, seleccionamos el codigo comentado y pulsacmos control + k y lugo la tecla u.</p>
+    </div>
+        <!--
+            ---------- Aqui finaliza la seccion de comentarios ----------
+        -->
+    
+    <div class="section">
+        <h2>Favicons</h2>
+        <p>Es el logo que aparece justo donde esta el nombre de la pestaña en el navegador. lo colocamos en la etiqueta head con la siguiente estructura:</p>
+        <code>&lt;link rel="icon" src="ruta de la imagen" type="image/png" &gt;</code>
+        <p>La imagen del logo tiene que ser de 64x64 pixeles o 32x32 pixeles</p>
+    </div>
+
+    <div class="section">
+
+        <h2>Metatags</h2>
+        <p>La finalidad de describir datos, configuraciones sobre nuestra web, no son visibles para el usuario</p>
+        <h3>Metatags</h3>
+        <ul>
+            <li>meta charset="UTF-8" - define el codigo de lenguaje "utf-8" permite todos los caracteres de todos los lenguajes</li>
+            <li>meta name="viewport" content="width=device-width, initial-scale=1.0"</li>
+            <li>meta name="desricption" content="descripcion de la pagina - cuando buscamos algo en los navegadores por lo general los resultados se componen del h1 y la description de la pagina (esa descripcion es la que define esta etiqueta)</li>
+            <li>meta name="keyword" content="metatags, comments html, favicons html" - se utiliza para definir las plabras clave que representan la tematica de la web. Importante para el posicionamiento de la web</li>
+            <li>meta name="author" content="Michael Golenia" - El nombre del autor de la página</li>
+            <li>meta name="robots" content="nofollow nosnippet noarchive noimageindex"</li>
+            <li>meta name="title" content="" - titulo de la web</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+
+        <h3>Open Graph Metatags</h3>
+        <ul>
+            <li>meta property="OG:title" content=""</li>
+            <li>meta property="OG:description"</li>
+            <li>meta property="OG:image"</li>
+            <li>meta property="OG:site_name"</li>
+            <li>meta property="OG:url"</li>
+        </ul>
+        
+        <p>Para cechear las OG tags podemos utilizar la pagina web <a href="https://metatags.io/" target="_blanks">metatags.io</a></p>
+    </div>
+    </body>
+    </html>
